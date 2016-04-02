@@ -3,10 +3,7 @@ var React = require('react-native')
 var {
   StyleSheet,
   Text,
-  View,
-  TouchableHighlight,
-  ActivityIndicatorIOS,
-  TextInput
+  View
 } = React;
 
 var styles = StyleSheet.create({
@@ -42,7 +39,7 @@ var styles = StyleSheet.create({
   button: {
     height: 45,
     flexDirection: 'row',
-    backgroundColor: 'red',
+    backgroundColor: 'white',
     borderColor: 'white',
     borderWidth: 1,
     borderRadius: 8,
@@ -53,38 +50,14 @@ var styles = StyleSheet.create({
   },
 });
 
-class Main extends React.Component{
-  constructor(props){
-    super(props);
-    this.state = {
-      isLoading: false,
-      error: false
-    }
-  }
-
-  handleSubmit(){
-    this.setState({
-      isLoading: true
-    });
-    console.log('SUBMIT');
-    //reroute to home page
-
-  }
-
+class Home extends React.Component{
   render(){
     return (
-      <View style={styles.mainContainer}>
-      <TextInput
-        style={styles.searchInput} />
-        <TouchableHighlight
-          style={styles.button}
-          onPress={this.handleSubmit.bind(this)}
-          underlayColor="red">
-            <Text style={styles.title}>Click me</Text>
-          </TouchableHighlight>
+      <View>
+        <Text>Testing</Text>
       </View>
       )
   }
 }
 
-module.exports = Main;
+module.exports = Home;
